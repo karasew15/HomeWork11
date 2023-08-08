@@ -11,13 +11,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var loginLabel: UILabel!
     
-    @IBOutlet weak var nameLoginTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var loginButton: UIButton!
-    
-    @IBOutlet weak var forgotYourPasswordLabel: UILabel!
     
     @IBOutlet weak var dontHaveAccountLabel: UILabel!
     
@@ -27,40 +23,26 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var secondBandView: UIView!
     
-    @IBOutlet weak var facebookTextField: UITextField!
+    @IBOutlet weak var nameLoginTextField: UITextField!
     
-    @IBOutlet weak var twitterTextField: UITextField!
+    @IBOutlet weak var facebookButton: UIButton!
+    
+    @IBOutlet weak var twitterButton: UIButton!
+    
+    @IBOutlet weak var forgotYourPasswordButton: UIButton!
+    
+    @IBOutlet weak var singUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // background
         
-        let backgroundViewIcon =  UIImage(named: "ekran")
+        let backgroundViewIcon =  UIImage(named: "screenIcon")
         let backgroundView = UIImageView(image: backgroundViewIcon)
         backgroundView.contentMode = .scaleAspectFill
         view.addSubview(backgroundView)
         view.sendSubviewToBack(backgroundView)
-        
-        func setLeftIcon(txtField: UITextField, andImage img: UIImage) {
-            
-            let iconViewLeft = UIImageView(frame: CGRect(x: 10, y: 5, width: 20, height: 20))
-            iconViewLeft.image = img
-            let iconContainerViewLeft: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 30, height: 30))
-            iconContainerViewLeft.addSubview(iconViewLeft)
-            txtField.leftView = iconContainerViewLeft
-            txtField.leftViewMode = .always
-        }
-        
-        func setRightIcon(txtField: UITextField, andImage img: UIImage) {
-
-            let iconViewRight = UIImageView(frame: CGRect(x: 0, y: 5, width: 20, height: 20))
-            iconViewRight.image = img
-            let iconContainerViewRight: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 30, height: 30))
-            iconContainerViewRight.addSubview(iconViewRight)
-            txtField.rightView = iconContainerViewRight
-            txtField.rightViewMode = .always
-        }
         
         // labelLogin
         
@@ -77,10 +59,10 @@ class ViewController: UIViewController {
         nameLoginTextField.placeholder = "karasew15"
         nameLoginTextField.textAlignment = .left
         
-        let loginIconLeft = UIImage(named: "chelovek")
+        let loginIconLeft = UIImage(named: "humanIcon")
         setLeftIcon(txtField: nameLoginTextField, andImage: loginIconLeft!)
         
-        let loginIconRight = UIImage(named: "galochka")
+        let loginIconRight = UIImage(named: "jackdawIcon")
         setRightIcon(txtField: nameLoginTextField, andImage: loginIconRight!)
         
         // textFieldPassword
@@ -90,69 +72,70 @@ class ViewController: UIViewController {
         passwordTextField.placeholder = "password"
         passwordTextField.textAlignment = .left
         passwordTextField.layer.cornerRadius = 20
-                
-        let passwordIcon = UIImage(named: "zamok")
+        
+        let passwordIcon = UIImage(named: "lockIcon")
         setLeftIcon(txtField: passwordTextField, andImage: passwordIcon!)
         
         // buttonLogin
         
-        loginButton.backgroundColor = .white
+        loginButton.backgroundColor = .blue
         loginButton.clipsToBounds = true
         loginButton.layer.cornerRadius = 10
         loginButton.setTitle("Login", for: .normal)
         
-        // labelText
+        // buttonFacebook
         
-        forgotYourPasswordLabel.text = "Forgot your password?"
-        forgotYourPasswordLabel.textColor = .white
-        forgotYourPasswordLabel.font = .systemFont(ofSize: 10)
-        forgotYourPasswordLabel.textAlignment = .center
-        forgotYourPasswordLabel.numberOfLines = 5
+        facebookButton.backgroundColor = .blue
+        facebookButton.clipsToBounds = true
+        facebookButton.layer.cornerRadius = 10
+        facebookButton.setTitle("Facebook", for: .normal)
         
-        // textFieldFacebook
+        // buttonTwitter
         
-        facebookTextField.backgroundColor = .white
-        facebookTextField.textColor = .blue
-        facebookTextField.textAlignment = .center
-        facebookTextField.placeholder = "Facebook"
-        facebookTextField.textAlignment = .left
-        
-        let facebookIcon = UIImage(named: "facebook")
-        setLeftIcon(txtField: facebookTextField, andImage: facebookIcon!)
-        
-        // textFieldTwitter
-        
-        twitterTextField.backgroundColor = .white
-        twitterTextField.textColor = .blue
-        twitterTextField.textAlignment = .center
-        twitterTextField.placeholder = "Twitter"
-        twitterTextField.textAlignment = .left
-        
-        let twitterIcon = UIImage(named: "twitter")
-        setLeftIcon(txtField: twitterTextField, andImage: twitterIcon!)
-        
-        // labelText
-        
-        dontHaveAccountLabel.text = "Dont have account? Sing up"
-        dontHaveAccountLabel.textColor = .white
-        dontHaveAccountLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        dontHaveAccountLabel.textAlignment = .center
-        dontHaveAccountLabel.numberOfLines = 1
-        dontHaveAccountLabel.font = .systemFont(ofSize: 10)
+        twitterButton.backgroundColor = .blue
+        twitterButton.clipsToBounds = true
+        twitterButton.layer.cornerRadius = 10
+        twitterButton.setTitle("Twitter", for: .normal)
         
         firstBandView.backgroundColor = .white
         secondBandView.backgroundColor = .white
         
-        // labelText
+    }
+    
+    func setLeftIcon(txtField: UITextField, andImage img: UIImage) {
         
-        orConnectWihtLabel.text = "or connect with"
-        orConnectWihtLabel.textColor = .white
-        orConnectWihtLabel.font = .systemFont(ofSize: 10)
-        orConnectWihtLabel.textAlignment = .center
-        orConnectWihtLabel.numberOfLines = 5
+        let iconViewLeft = UIImageView(frame: CGRect(x: 10,
+                                                     y: 5,
+                                                     width: 20,
+                                                     height: 20))
+        iconViewLeft.image = img
+        let iconContainerViewLeft: UIView = UIView(frame: CGRect(x: 20,
+                                                                 y: 0,
+                                                                 width: 30,
+                                                                 height: 30))
+        iconContainerViewLeft.addSubview(iconViewLeft)
+        txtField.leftView = iconContainerViewLeft
+        txtField.leftViewMode = .always
+    }
+
+    func setRightIcon(txtField: UITextField, andImage img: UIImage) {
         
+        let iconViewRight = UIImageView(frame: CGRect(x: 0,
+                                                      y: 5,
+                                                      width: 20,
+                                                      height: 20))
+        iconViewRight.image = img
+        let iconContainerViewRight: UIView = UIView(frame: CGRect(x: 20,
+                                                                  y: 0,
+                                                                  width: 30,
+                                                                  height: 30))
+        iconContainerViewRight.addSubview(iconViewRight)
+        txtField.rightView = iconContainerViewRight
+        txtField.rightViewMode = .always
     }
 }
+
+
 
 
 
