@@ -3,4 +3,38 @@
    uuid = "11EE4B64-4F17-4F08-B8FC-083A95ED8852"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "685A529F-6293-490B-A84D-C26F3388F261"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x414;&#x43e;&#x43c;&#x430;&#x448;&#x43d;&#x435;&#x435; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x435; &#x2116;11/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36A5C8AB-DD67-4E6A-BEDF-4C809ACB2455"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x414;&#x43e;&#x43c;&#x430;&#x448;&#x43d;&#x435;&#x435; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x435; &#x2116;11/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "setRightIcon(txtField:andImage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
